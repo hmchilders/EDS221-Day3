@@ -97,3 +97,22 @@ for (i in seq_along(height_1)){
   print(std_val)
 }
 ```
+
+## For Loops with Conditional Statements
+
+```{r}
+library(palmerpenguins)
+
+```
+
+Write a for loop with an if statement that returns the means of all numeric vales in the dataset
+
+```{r}
+for (i in seq_along(penguins)){
+  if (is.numeric (penguins[[i]])){
+  mean_peng <- mean(penguins[[i]], na.rm = TRUE)
+  print(mean_peng)}
+}
+
+
+```
