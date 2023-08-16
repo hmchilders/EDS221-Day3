@@ -37,3 +37,23 @@ if (blue_whale > 35){
   print("small")
 }
 ```
+
+###  Switch Statement
+
+```{r}
+housing_type <- "double"
+
+switch(housing_type,
+       "single" = print("400"),
+       "double" = print("750"),
+       "whole house" = print("1100")
+)
+
+if (housing_type == "whole house") {
+  print("1100")
+} else if (housing_type == "double"){
+  print("750")
+} else if (housing_type == "single") {
+  print("400")
+}
+```
