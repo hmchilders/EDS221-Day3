@@ -38,7 +38,7 @@ if (blue_whale > 35){
 }
 ```
 
-###  Switch Statement
+### Switch Statement
 
 ```{r}
 housing_type <- "double"
@@ -55,5 +55,45 @@ if (housing_type == "whole house") {
   print("750")
 } else if (housing_type == "single") {
   print("400")
+}
+```
+
+## For Loops
+
+```{r}
+height <- c(58,61,65,71,89,94,101)
+
+height_ft  <- vector("numeric", length(height))
+
+for (i in seq_along(height)){
+  height_conv = height[i]/12 
+  height_ft[i] = height_conv
+}
+print(height_ft)
+```
+
+```{r}
+# mass <- c(58,61,65,71,89,94,101)
+# 
+# for (i in seq_along(mass)) {
+#   mass_sum = mass[i] + mass[i+1]
+#   print(mass_sum)
+
+mass <- c(58,61,65,71,89,94,101)
+
+for (i in seq(1, length(mass)-1)) {
+  mass_sum = mass[i] + mass[i+1]
+  print(mass_sum)
+}
+```
+
+Write a for loop that calculates the value of hieght for each element divided by the mean of the entire height vector
+
+```{r}
+height_1 <- c(45,56,67,78,90,101,35,67,57,48)
+
+for (i in seq_along(height_1)){
+  std_val = height_1[i]/mean(height_1)
+  print(std_val)
 }
 ```
